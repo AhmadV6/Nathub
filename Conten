@@ -214,6 +214,13 @@ end
 -- ─────────────────────────────────────────────
 -- MAIN SCRIPT (file 2)
 -- ─────────────────────────────────────────────
+local function createLoadingScreen()
+    return function(callback)
+        if callback then
+            callback()
+        end
+    end
+end
 
 local startLoad = createLoadingScreen()
 
